@@ -19,7 +19,8 @@ public class Receiver extends Thread{
 			try {
 				System.out.println(in.readUTF());
 			}catch (Exception e) {
-				e.printStackTrace();
+				System.out.println("연결종료");
+				break;
 			}
 		}
 	}
