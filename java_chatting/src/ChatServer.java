@@ -11,13 +11,13 @@ public class ChatServer {
 		try {
 			serverSocket = new ServerSocket(7777);
 			System.out.println("서버 준비 완료");
-			Sender2 sender2=new Sender2();
-			sender2.start();
+			ServerSender serverSender=new ServerSender();
+			serverSender.start();
 			while (true) {
 				socket = serverSocket.accept();
 
 				Sender sender = new Sender(socket);
-				Receiver2 receiver = new Receiver2(socket);
+				ServerReceiver receiver = new ServerReceiver(socket);
 				
 				list.add(sender);
 				

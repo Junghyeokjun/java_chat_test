@@ -2,10 +2,10 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Sender2 extends Thread{
+public class ServerSender extends Thread{
 	String name;
 	
-	public Sender2() {
+	public ServerSender() {
 		try {
 			name="[서버]";
 		} catch (Exception e) {

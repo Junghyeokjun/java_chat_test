@@ -3,11 +3,11 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Receiver2 extends Thread{
+public class ServerReceiver extends Thread{
 	Socket socket;
 	DataInputStream in;	
 
-	public Receiver2(Socket socket) {
+	public ServerReceiver(Socket socket) {
 		this.socket=socket;
 		 try {
 			 in=new DataInputStream(socket.getInputStream());
